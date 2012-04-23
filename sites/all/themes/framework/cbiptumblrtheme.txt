@@ -1,0 +1,326 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!--
+     Theme: C-BIP
+     Design: Columbia GSAPP Cloud Communication Group (http://gsappcloud.tumblr.com)
+-->
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+     <title>{Title}{block:PostSummary} | {PostSummary}{/block:PostSummary}{block:SearchPage} | {lang:Search results for SearchQuery}{/block:SearchPage}</title>	
+     <meta name="description" content="{MetaDescription}" />
+     <meta name="if:Show description" content="1" />	
+     <meta name="if:Show search" content="1" />
+     <meta name="text:Twitter name" content="" />
+     <meta name="text:Disqus Shortname" content="" />
+     <meta name="text:Google Analytics ID" content="" />	
+     <link rel="shortcut icon" href="{Favicon}" />
+     <link rel="alternate" type="application/rss+xml" title="{Title}" href="{RSS}" />
+
+<!-- Styles -->
+
+<link rel="stylesheet" href="http://static.tumblr.com/f1whv92/Mp9l6ewcg/reset.css" />
+<link rel="stylesheet" href="http://c-bip.org/sites/all/themes/framework/cbiptumblr.css" />
+
+<!-- Scripts -->
+
+<!--[if IE]>
+     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+<script>
+     $(function() {
+        var search = $("#txtSearch").val();
+        var placeholder = "Search...";
+        var fadeToOpacity = 0.4;
+        $("#txtSearch").fadeTo("normal", fadeToOpacity);
+        if (search == "") {
+     $("#txtSearch").val(placeholder);
+     }
+     $("#txtSearch").blur(function() {
+        search = $("#txtSearch").val();
+        if (!(search != "" && search != placeholder)) {
+        $("#txtSearch").val(placeholder);
+     }
+     $("#txtSearch").fadeTo("normal", fadeToOpacity);
+     });
+     $("#txtSearch").focus(function() {
+        search = $("#txtSearch").val();
+        if (search == placeholder) {
+        $("#txtSearch").val("");
+     }
+     $("#txtSearch").fadeTo("normal", 1);
+     });
+     $("#btnSearch").click(function() {
+     $("#frmSearch").slideToggle("normal");
+     $(this).toggleClass("active");
+ //  $("#txtSearch").focus();
+     });
+     });
+</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-29153313-1']);
+  _gaq.push(['_setDomainName', 'c-bip.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+<body>
+<div id="container">
+     <header id="header" role="banner" class="clearfix">
+    	<div id="headertop">
+              <a href="http://c-bip.org" title="Home" id="logo"><img src="http://c-bip.org/sites/default/files/framework_logo.gif" alt="Home" /></a>           
+      	<div id="headersection">
+      		<img src="http://c-bip.org/sites/default/files/assets/blogsheader.png" />
+      	</div><!-- #headersection -->
+      	
+      	
+      	</div> <!-- #headertop -->
+      	<img id="oldcastle" class="clearfix" src="http://c-bip.org/sites/default/files/assets/oldcastle.gif" />
+
+      	<form action="/search" method="get" id="frmSearch">
+              <input type="text" id="txtSearch" name="q" value="{SearchQuery}" />
+    	</form> 
+           <nav id="mainNav">        
+              {block:HasPages}
+              {block:Pages}<li><a href="{URL}">{Label}</a></li>{block:Pages}
+              {/block:HasPages}                
+              {block:IfTwitterName}
+              <li><a href="http://twitter.com/{text:Twitter name}">Twitter</a></li>
+              {/block:IfTwitterName}
+           </nav>  
+           
+           <div id="backcontainer" class="clearfix"><a id="back" href="http://c-bip.org/studios/studio-2012">BACK</a></div>
+			<div id="studentname"><a href="/">{Title}</a></div>
+			<div id="headerlinks">
+				<a id="rss" href="{RSS}">RSS</a>
+    			<a id="archive" href="/archive">Archive</a>
+			</div>
+	</header> <!-- /#header -->  
+	
+     <section id="main" class="clearfix">
+     <div class="layout">           
+     {block:SearchPage}
+        <article>
+           <div>
+              <div class="searchPage">
+                 <h2>Search results for <a href="{URLSafeSearchQuery}">{SearchQuery}</a></h2>
+              </div>
+                    {block:NoSearchResults}
+                    <div class="searchPageText">
+                       <p>I’m sorry, but we couldn't find anything matching "<b>{SearchQuery}</b>". Suggestions:</p>
+                       <ul>
+                          <li>Make sure all words are spelled correctly.</li>
+                          <li>Try different keywords.</li>
+                          <li>Try more general keywords.</li>
+                       </ul>
+                    </div>
+                    {/block:NoSearchResults}
+           </div>
+        </article>
+     {/block:SearchPage}
+      
+     {block:TagPage}
+     <article>
+        <div>
+           <div class="searchPage">
+           <h2>Posts tagged <a href="{TagURL}">{Tag}</a></h2>
+           </div>
+        </div>
+     </article>
+     {/block:TagPage}      
+
+{block:Posts}
+     
+    <div class="postDate">
+        <abbr>{block:Date}<a href="{Permalink}">{ShortMonth} {DayOfMOnth}{DayOfMonthSuffix}, {Year}</a>{/block:Date}
+        </abbr>
+    </div>
+     
+
+     <article>
+        <div>
+           {block:Text}
+              {block:Title}<div class="textpost"><a href="{Permalink}">{Title}</a></div>{/block:Title}
+              {Body}
+           {/block:Text}
+          
+           {block:Photo}
+              {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" />{LinkCloseTag}
+              {block:Caption}<div class="photoCaption">{Caption}</div>{/block:Caption}
+           {/block:Photo}
+          
+           {block:Photoset}
+              <div class="media">{Photoset-500}</div>
+              {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+           {/block:Photoset}
+          
+           {block:Quote}
+              <div class="quoteText">{Quote}</div>
+              {block:Source}<div class="quoteSource"><p>&mdash;{Source}</p></div>{/block:Source}
+           {/block:Quote}
+
+           {block:Link}
+              <div class="linkpost">Link: <a href="{URL}" {Target}>{Name}</a></div>
+              {block:Description}
+              <div>{Description}</div>
+              {/block:Description}
+           {/block:Link}       
+          
+          {block:Chat}
+             {block:Title}<h2>{Title}</h2>{/block:Title}
+             <ul class="chat">
+                {block:Lines}
+                <li>{block:Label}<strong>{Label}</strong>{/block:Label} {Line}</li>
+                {/block:Lines}
+             </ul>
+          {/block:Chat}
+
+          {block:Audio}
+             <div class="audioleft">
+                <div class="audioc">
+                	<div class="audio">{AudioPlayerBlack}</div>
+                </div>
+             </div>
+             <div class="audioright"> 
+                <div class="audioCaption">{block:Artist}<b>{Artist}</b>{/block:Artist}
+<p>&mdash;{block:TrackName}{TrackName}{/block:TrackName}</p>
+                </div>
+             </div>
+             <div class="audioClear"></div>
+             <div class="audioContainer">
+                {block:Caption}{Caption}{/block:Caption}
+             </div>
+          {/block:Audio}
+         
+          {block:Video}
+             <div class="media">{Video-500}</div>
+             {block:Caption}<div>{Caption}</div>{/block:Caption} 
+          {/block:Video}
+          
+          <div class="notecontainer">
+          
+          {block:PostNotes}
+          {PostNotes}
+          {/block:PostNotes}
+          </div>
+          
+          {block:HasTags}
+          		<div class="tagcontainer"><span>Tagged:&nbsp;</span>
+                    <ul class="tags">
+                        {block:Tags}
+                            <li>
+                                <a href="{TagURL}">{Tag}</a>
+                            </li>
+                        {/block:Tags}
+                    </ul>
+                </div>
+        {/block:HasTags}
+        
+        {block:NoteCount}<div class="notecount">{NoteCountWithLabel}</div>{/block:NoteCount}
+ 		<div><a class="dsq-comment-count" href="{Permalink}#disqus_thread">Comments</a></div>
+  
+  	
+          
+ 
+        </div><!-- after article -->
+     </article>
+{/block:Posts}
+
+{block:Permalink}
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'cbiptumblr'; 
+	var disqus_identifier = 'blogcbip-disqus-id';
+	var disqus_url = "{Permalink}";
+	
+	console.log("short: " + disqus_shortname + " id: " + disqus_identifier + " url: " + disqus_url);
+	
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+{/block:Permalink}
+
+
+
+
+
+
+
+
+     {block:PermalinkPagination}
+        <nav id="pageNav">
+           <ul class="clearfix">
+              {block:PreviousPost}<li><a href="{PreviousPost}" id="pageNavNewer">Previous</a></li>{/block:PreviousPost}
+              {block:NextPost}<li><a href="{NextPost}" id="pageNavOlder">Next</a></li>{/block:NextPost}  
+           </ul>
+        </nav>
+     {/block:PermalinkPagination}
+      
+     {block:Pagination}
+        <nav id="pageNav">
+           <ul class="clearfix">
+             {block:PreviousPage}<li><a href="{PreviousPage}" id="pageNavNewer">Newer</a></li>{/block:PreviousPage} 
+             {block:JumpPagination length="5"}
+             {block:CurrentPage}<li><a href="{URL}" class="active">{PageNumber}</a></li>{/block:CurrentPage}
+             {block:JumpPage}<li><a href="{URL}">{PageNumber}</a></li>{/block:JumpPage}
+             {/block:JumpPagination}
+             {block:NextPage}<li><a href="{NextPage}" id="pageNavOlder">Older</a></li>{/block:NextPage} 
+           </ul>
+        </nav>
+     {/block:Pagination} 
+      
+     {block:DayPagination}
+        <nav id="pageNav">
+           <ul class="clearfix">
+              {block:PreviousDayPage}<li><a href="{PreviousDayPage}">&laquo; {DayOfMonth} {ShortMonth}</a></li>{/block:PreviousDayPage}{block:NextDayPage}|<li><a href="{NextDayPage}">{DayOfMonth} {ShortMonth} &raquo;</a></li>{block:NextDayPage}
+           </ul>
+        </nav>
+     {/block:DayPagination}
+     
+     </div><!-- END layout -->
+     </section>
+
+     <footer>
+        <div class="clearfix">
+        	<div id="footerlogo">
+        		<img src="http://c-bip.org/sites/default/files/assets/GSAPPfooterBG.png" />
+        		<span>1172 Amsterdam Avenue<br>
+				New York, New York 10027</span>
+        	</div>
+        	<div id="footeroldcastle">
+        		<span>Columbia Building Intelligence Project has been generously underwritten by Oldcastle BuildingEnvelope™</span><br>
+							</div>
+			<div id="footerright">
+				<div class="footlinks"><a href="http://c-bip.org/contact">Contact</a></div>
+				<span>Site design, and Tumblr theme, by <a href="http://gsappcloud.tumblr.com" target="_blank">GSAPP Cloud Communication Group</a></span>
+			</div>
+        </div>
+     </footer>
+
+     {block:IfGoogleAnalyticsID}
+        <script type="text/javascript">var gaJsHost=(("https:"==document.location.protocol)?"https://ssl.":"http://www.");document.write(unescape("%3Cscript src='"+gaJsHost+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">try{var pageTracker=_gat._getTracker("{text:Google Analytics ID}");pageTracker._trackPageview()}catch(err){}</script>
+     {block:IfGoogleAnalyticsID}
+
+</div><!-- #container -->
+</body>
+</html>

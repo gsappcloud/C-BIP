@@ -1,0 +1,476 @@
+     header, footer, section, article, nav, aside {
+        display: block;
+     }
+     
+     header {
+	    margin: 0 auto;
+		padding: 35px 0 0;
+		position: relative;
+		width: 960px;
+	}
+     
+     body {
+        background: #fff;
+  		color: #222;
+  		font-family: "Swiss 721", "Helvetica Neue", Helvetica, Arial, sans-serif;
+ 	 	font-size: 18px;
+  		line-height: 1.5;
+  		margin: 0;
+  		padding: 0;
+     }
+     
+     #container{
+    	margin: 0 auto;
+		padding: 0 32px;
+		width: 1024px;
+	 	display: block;
+	 }
+	 
+	 #main{
+	 	clear: both;
+	 	text-align: center;
+		width: 500px;
+		margin: 0 auto;
+	}
+
+     h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+
+p {
+  font-size: 1em;
+  line-height: 1.5;
+  margin: 0 0 0 0;
+}
+
+
+     a { color: #222; text-decoration: none; border-bottom: 1px dotted black;}
+
+a:visited { color: #222; }
+
+a:hover, a:active, li a.active { color: #D3DB20; }
+
+     li ul, li ol {  margin: 0; }
+ul, ol {  margin: 0 1.5em 1.5em 0;  padding-left: 1.5em; }
+ul {  list-style-type: disc; }
+ol {  list-style-type: decimal; }
+dl {  margin: 0 0 1.5em 0; }
+dl dt {  font-weight: bold; }
+dd {  margin-left: 1.5em; }
+hr {  background: #666;  border: none;  clear: both;  float: none;  height: 1px;  margin: 0 0 1.4375em;  width: 100%; }
+
+/*----- MASTHEAD -----*/
+
+    #header {
+  margin: 0 auto;
+	padding: 35px 0 0;
+	position: relative;
+	width: 960px;
+}
+
+#header #headertop{
+	display:block;
+	border-bottom:1px solid black;
+	width:100%;
+	height:80px;
+}
+
+#header #logo {
+  float: left;
+  margin: 0 40px 0 0;
+}
+
+#headertop a { border:none; }
+
+#oldcastle {
+	float:left;
+	margin:15px 0 0 22px;
+	display:inline;
+}
+
+#frmSearch {
+	float: right;
+	margin: 17px 20px 0 20px;
+	display: block;
+}
+
+#archive, #rss{
+list-style: none;
+margin-right: 10px;
+padding-right: 0;
+font: 18px "Swiss 721", Helvetica, Arial, sans-serif;
+border: none;
+display: inline;
+}
+
+#backcontainer{
+	padding-top: 20px;
+	margin:0 auto 50px;
+	text-align: center;
+	clear: both;
+	width: 237px;
+	height: 73px;
+	text-indent: -9999px;
+}
+#back {
+	border: none;
+	width: 237px;
+	height: 73px;
+	display: block;
+	background: transparent url("/sites/default/files/assets/backSprite.gif") 0 0 no-repeat;
+}
+#back:hover {
+	background: transparent url("/sites/default/files/assets/backSprite.gif") 0 -75px no-repeat;
+}
+
+#studentname{
+	font-size: 36px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 42px;
+	margin: 0 auto 5px;
+}
+
+#studentname a{
+	border:none;
+}
+
+#headerlinks{
+	width: 100%;
+	text-align: center;
+	margin: 0 auto 35px;
+}
+
+/*----- SEARCH FORM -----*/
+
+
+     #txtSearch {
+        background: url(http://static.tumblr.com/bpryy0m/6lRl6gmys/search.jpg) right no-repeat;
+        padding: 2px 20px 0 0;
+        font: 12px/12px Helvetica, Arial, sans-serif;
+        color: #222;
+        border: 0px;
+     }
+
+
+/*----- NAV -----*/
+
+nav { clear:both;}
+
+/*----- ARTICLE META INFO -----*/
+
+     #designline {
+        margin-top: 50px;
+     }
+
+     h5{
+        position: relative;
+        top: -35px;
+        margin-bottom: 0px;
+        font-family: Georgia, serif;
+        font-size: 10px;
+        color: #bca474;
+        text-decoration: none;
+        text-transform: Uppercase;
+        font-weight: bold;
+        border-bottom: 1px solid #bca474;
+        background: #fff;
+     }
+
+     h5 a:link, .line a:visited{
+        font-family: Georgia, serif;
+        font-size: 10px;
+        color: #bca474;
+        text-decoration: none;
+        text-transform: Uppercase;
+        font-weight: bold;
+     }
+
+     .postDate abbr{
+		padding: 0 0 20px;
+		text-align: center;
+		display: block;
+     }
+
+     .postDate a{
+        border:none;
+        font-size: 18px;
+		font-weight: bold;
+		color:#222;
+     }
+     
+     .postDate a:hover{
+     	color:#D3DB20;
+     }
+
+/*----- ARTICLE -----*/
+
+     article {
+        background: transparent;
+        margin-bottom: 50px;
+        text-align: left;
+        border-bottom:1px solid #222;
+        padding-bottom:20px;
+      }
+
+     article img {
+        border: none;
+        margin-bottom: 15px;
+        max-width: 500px;
+     }
+
+     article p img {
+        margin: 0;
+     }
+     article > div {
+        padding: 0px;
+        overflow: hidden;
+     }
+     article .searchPage {
+        margin: 35px 0 0 0;
+     }
+
+     .searchPageText {
+        margin: 0 0 30px 0;
+     }
+
+     article .meta a:link, article .meta a:visited {
+        text-decoration: none;
+     }
+
+     article h2 {
+        font-size: 18px;
+		font-weight: bold;
+		margin: 0 0 20px;
+		text-align: center;
+     }
+
+     blockquote {
+        border-left: 2px solid #bca474;
+        margin-left: 0;
+        padding-left: 1em;
+     }
+
+     .quoteSource{
+        text-align: left;
+     }
+
+
+     article .chat {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+     }
+
+     article .chat li {
+        margin: 0 0 2px;
+        padding: 2px 0 2px 0;
+     }
+
+     .photoCaption {
+        text-align: center;
+     }
+     
+     .quoteText, .linkpost a, .textpost a, .textpost {
+     	text-align: left;
+		color: #222;
+		font-size: 36px;
+		line-height: 42px;
+		margin-bottom: 12px;
+		font-weight: bold;
+		text-transform:none;
+		border:none;
+     }
+     
+     .linkpost {
+     	text-align: left;
+		color: #222;
+		font-size: 36px;
+		line-height: 42px;
+		margin-bottom: 12px;
+		font-weight: normal;
+		text-transform:none;
+     }
+	
+
+
+/*----- AUDIO PLAYER -----*/
+
+     .audio {
+        height: 28px;
+        width: 26px;
+        overflow: hidden;
+        margin: auto;
+        padding-top: 7px;
+     }
+
+     .audioc {
+        background-image:url('http://static.tumblr.com/f1whv92/9iCl6bfgp/audiocircle.png');
+        background-repeat: no-repeat; 
+        height: 41px;
+        width: 41px;
+     }
+
+     .audioCaption {
+        margin-top: 1px;
+     }
+
+     .audioleft {
+        width: 41px;
+        float: left;
+      }
+
+     .audioright {
+        width: 444px;
+        float: right;
+      }
+
+     .audioContainer {
+        margin-top: 20px;
+     }
+
+     .audioClear {
+        clear:both;
+     }
+
+/*----- ARTICLE NOTES -----*/
+
+     .notes {
+        border-top: 1px solid #222;
+        list-style: none;
+        padding: 20px 0 5px 0;
+        margin: 30px 0 0 0;
+     }
+     .notes li {
+        margin: 0;
+     }
+
+     .notes .avatar {
+        margin: 0 5px 0 0;
+        position: relative;
+        top: 5px;
+     }
+
+     .notes blockquote {
+        margin: 10px 0 0 35px;
+        padding-left: 10px;
+        border-left: 2px solid #222222;
+     }
+     
+     .notecount { color:#D3DB20;}
+
+     .media {
+        text-align: center;
+		margin: 0 auto 20px;
+     }
+     
+	.tagcontainer {margin: 20px 0 0 0;}
+    .tagcontainer span {display:inline;}
+    ul.tags { list-style: none; margin: 0; padding: 0; display: inline; }
+	ul.tags li { display: inline; }
+	ul.tags li:after { content:","; } 
+	ul.tags li:last-child:after { content: ""; }
+
+/*----- PAGE NAVIGATION -----*/
+
+     #pageNav {
+        margin-top: 20px;
+     }
+
+     #pageNav ul {
+        list-style: none;
+        padding:0;
+        width: 100%;
+     }
+
+     #pageNav li {
+        margin: 0;
+        display: inline;
+     }
+
+     #pageNavNewer {
+        display: inline-block;
+		text-indent: -9999px;
+		height: 56px;
+		width: 148px;
+		border: none;
+		float:left;
+		background:transparent url("/sites/default/files/assets/newerSprite.png") 0 0 no-repeat;
+     }
+     
+     #pageNavNewer:hover {
+     	background:transparent url("/sites/default/files/assets/newerSprite.png") 0 -56px no-repeat;
+     }
+     
+     #pageNavOlder {
+		display: inline-block;
+		text-indent: -9999px;
+		height: 56px;
+		width: 143px;
+		border: none;
+		float:right;
+		background:transparent url("/sites/default/files/assets/olderSprite.png") 0 0 no-repeat;
+	 }
+
+	#pageNavOlder:hover {
+		background:transparent url("/sites/default/files/assets/olderSprite.png") 0 -56px no-repeat;
+	}
+
+/*----- FOOTER META -----*/
+
+     footer{
+     	clear:both;
+     	margin: 0 auto;
+		padding: 55px 0 0;
+		position: relative;
+		width: 960px;
+     }
+     
+     #footerright{
+     	float:left;
+     	width:240px;
+     	margin:78px 0 0 0;
+     }
+     
+    #footerright .footlinks a{
+     	border:none;
+     	color:#777;
+     	float:left;
+     	margin-right:20px;
+     	font-weight:bold;
+     }
+     .footlinks{
+     	width:100%;
+     	margin-bottom:36px;
+     }
+     
+     footer #footerlogo{
+     	width:260px;
+     	margin:0 100px 36px 0;
+     	float:left;
+     }	
+     
+     footer #footerlogo img{
+     	margin-bottom:30px;
+     }
+     
+     footer #footerlogo span{
+     	color:#777;
+     }
+     
+     footer #footeroldcastle{
+     	float:left;
+     	width:260px;
+     	margin:78px 100px 0 0;
+     }
+     
+/* Tumblr */
+
+#disqus_thread a{
+	border:none;
+}
+     
+     

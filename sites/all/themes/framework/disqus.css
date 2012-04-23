@@ -1,0 +1,193 @@
+@import url("sheet.css");
+
+/* @override 
+	http://c-bip.org/sites/all/themes/framework/disqus.css
+	http://mediacdn.disqus.com/1328224449/build/system//defaults.css
+*/
+
+
+
+#disqus_thread {
+	margin-top: 50px;
+}
+
+#dsq-content {
+	background-color: #222;
+	color: white;
+	padding: 0 45px;
+}
+
+.element-dsq ul{
+	list-style: none;
+}
+
+#dsq-global-toolbar {
+	float: left !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+#dsq-content a{
+	color: white;
+	border: none;
+	font: 14px Helvetica, Arial, sans-serif;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#dsq-content a:hover{
+	color: #d3db20;
+}
+
+.dsq-header-avatar{
+	clear: both !important;
+	display: none !important;
+	width: 32px !important;
+	height: 32px !important;
+	margin: 30px 0 0 0 !important;
+}
+
+.dsq-header-avatar a img{
+	width: 32px !important;
+	height: 32px !important;
+}
+
+#dsq-reply #dsq-account-dropdown{
+	float: right !important;
+}
+
+#dsq-content #dsq-new-post h3 {
+	display: none;
+}
+
+.dsq-textarea {
+	width: 100%;
+	float: left;
+	margin: 30px 0 0 0;
+}
+
+#dsq-content #dsq-global-toolbar .dsq-global-toolbar-right{
+	float: left !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+.dsq-textarea .dsq-textarea-background {
+	border:none;
+}
+
+.dsq-textarea .dsq-textarea-background .dsq-textarea-wrapper{
+	background: white;
+	padding: 10px;
+}
+
+.dsq-textarea .dsq-textarea-background .dsq-post-tools{
+	
+}
+
+.dsq-textarea .dsq-textarea-background .dsq-post-tools ul{
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.dsq-textarea .dsq-textarea-background .dsq-post-tools .dsq-post-as{
+	float: right;
+	margin: 10px 0 40px;
+}
+.dsq-textarea .dsq-textarea-background .dsq-post-tools .dsq-post-as button.dsq-button, button.dsq-button{
+	border-radius:0;
+	-webkit-border-radius:0;
+	-moz-border-radius:0;
+	color: white;
+	border: 3px solid white;
+	font-family: Helvetica, Arial, sans-serif;
+	background: transparent;
+	background-image: none;
+	text-shadow: none;
+}
+
+
+.dsq-popup-body button.dsq-button{
+color:#222 !important;
+}
+
+.dsq-textarea .dsq-textarea-background .dsq-post-tools .dsq-attach-media, .dsq-attach-media{
+}
+#dsq-sort-by {
+	clear: both;
+}
+
+#dsq-content h3{ /* Showing N Comments */
+	margin: 30px 0;
+}
+
+#dsq-comments {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.dsq-comment{
+	border-top: 1px solid #222;
+	padding-top: 20px;
+}
+
+.dsq-comment .dsq-avatar {
+	float: left !important;
+	margin: 0 20px 0 0;
+}
+
+.dsq-comment .dsq-comment-body .dsq-comment-header{
+	float: left !important;
+}
+
+.dsq-comment .dsq-comment-body .dsq-comment-header .dsq-collapsed-count, #dsq-comments .dsq-comment .dsq-comment-body .dsq-comment-header .dsq-collapse-toggle{
+	display: none;
+}
+
+.dsq-comment .dsq-comment-body .dsq-comment-message{
+	clear: both;
+	padding: 10px 0 0 0;
+}
+
+.dsq-comment .dsq-comment-body .dsq-comment-footer{
+	margin: 20px 0;
+}
+
+.dsq-comment .dsq-comment-body .dsq-comment-footer .dsq-comment-actions{
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+.dsq-comment .dsq-comment-body .dsq-comment-footer .dsq-comment-actions li{
+	display: inline;
+	margin-right: 5px;
+	
+}
+
+.dsq-comment .dsq-comment-body .dsq-comment-footer .dsq-comment-meta{
+	float: right;
+}
+
+.dsq-subscribe-email img {display:none;}
+.dsq-subscribe-rss img {display:none;}
+.dsq-like-thumb {display:none;}
+
+#dsq-footer{
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+
+/* new for other theme */
+.dsq-request-user-info .dsq-request-user-name, .dsq-request-user-info .dsq-request-user-stats { display:none;}
+#dsq-content .dsq-request-user-avatar {
+	border:none !important;
+	padding:0 !important;
+	-moz-box-shadow: none !important;
+	-webkit-box-shadow:none !important;
+	box-shadow:none !important;
+	-moz-border-radius:none !important;
+	-webkit-border-radius:none !important;
+	border-radius:none !important;
+}

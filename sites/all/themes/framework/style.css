@@ -1,0 +1,1442 @@
+@import url("sheet.css");
+
+/* @override 
+	http://c-bip.org/sites/all/themes/framework/style.css?V
+	http://www.c-bip.org/sites/all/themes/framework/style.css?A
+	http://c-bip.org/sites/all/themes/framework/style.css?A
+*/
+
+/* Drupal 6 Framework - Created by Andre Griffin
+------------------------------------------------
+[Table of contents]
+
+ 0.Reset
+ 1.Global
+ 2.Layout
+ 3.Main
+ 4.Sidebars
+ 5.Header
+ 6.Navigation
+ 7.Nodes
+ 8.Comments
+ 9.Blocks
+10.Footer
+11.CSS Support
+
+Font sizes: 16px base font with 24px line-height
+------------------------------------------------
+       font-size / line-height / margin-top
+------------------------------------------------
+40px = 2.5em     / 1.2         / 0.6em
+32px = 2em       / 1.5         / 0.75em
+24px = 1.5em     / 1           / 1em
+20px = 1.25em    / 1.2         / 1.2em
+16px = 1em       / 1..5        / 1.5em
+14px = 0.875em   / 1.7143      / 1.7143em
+13px = 0.8125em  / 1.8462      / 1.8462em
+12px = 0.75em    / 2           / 2em
+10px = 0.625em   / 2.4         / 2.4em
+
+Equation for font sizing: 
+  Desired px ÷ Default (or parent) px = em size
+------------------------------------------------*/
+
+/**
+ * 0.RESET 
+ */
+
+@import "reset.css";
+
+
+/**
+ * 1.GLOBAL
+ */
+
+body {
+  background: #fff;
+  color: #222;
+  font-family: "Swiss 721", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+h1, .h1 {
+  font-size: 2em;
+  line-height: 1.5;
+  margin-top: 0.75em;
+}
+
+h2, .h2 {
+  font-size: 1.5em;
+  line-height: 1;
+  margin-top: 1em;
+}
+
+h3, .h3 {
+  font-size: 1.25em;
+  line-height: 1.2;
+  margin-top: 1.2em;
+}
+
+h4, h5, h6, .h4, .h5, .h6 {
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1.5;
+  margin-top: 1.5em;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.5;
+  margin: 0 0 25px 0;
+}
+
+a { color: #222; text-decoration: none; border-bottom: 1px dotted black;}
+
+a:visited { color: #222; }
+
+a:hover, a:active  { color: #555; }
+
+li a.active { color:#222;}
+
+#main div.view-Studio2012 div.attachment div.view-content div.views-field-title span.field-content a {
+	font-size: 18px;
+	margin: 0;
+}
+
+a:focus {  }
+
+/* apply common styling after reset.css */
+
+li ul, li ol {  margin: 0; }
+ul, ol {  margin: 0 1.5em 1.5em 0;  padding-left: 1.5em; }
+ul {  list-style-type: disc; }
+ol {  list-style-type: decimal; }
+dl {  margin: 0 0 1.5em 0; }
+dl dt {  font-weight: bold; }
+dd {  margin-left: 1.5em; }
+hr {  background: #666;  border: none;  clear: both;  float: none;  height: 1px;  margin: 0 0 1.4375em;  width: 100%; }
+fieldset { }
+table {  margin-bottom: 1.5em;  width: 100%; }
+th, tr, td {  vertical-align: middle; }
+th { padding-right: 1em; }
+.sticky-header th, .sticky-table th {  border-bottom: 3px solid #ccc;  padding-right: 1em;  text-align: left; }
+br {
+	margin-bottom: 18px;
+}
+/**
+ * 2.LAYOUT
+ */
+
+#container {
+  margin: 0 auto;
+	padding: 0;
+	width: 1100px;
+	display: block;
+	position:relative;
+}
+
+#wrapper {
+	text-align:center;
+	width:710px;
+	margin:0 auto;
+}
+
+/**
+ * 3.MAIN
+ */
+
+/* 1 column: global values*/
+
+#main {
+  display: inline;
+  margin: 0;
+  text-align:left;
+}
+
+section#main h1.title { 
+	text-align: center;
+	font-size: 36px;
+	margin: 0 auto;
+	font-weight: bold;
+	display: block;
+	line-height:1em;
+}
+
+/* 3 columns */
+
+
+
+/**
+ * 4.SIDEBARS
+ */
+
+/* 3 columns: sidebar-left */
+
+#sidebar-right {
+  position:absolute;
+  margin: 0;
+  padding: 0;
+  width: 140px;
+  top: 210px;
+  right: 38px;
+}
+
+#sidebar-left {
+  position:absolute;
+  margin: 0;
+  padding: 0;
+  width: 140px;
+  top: 210px;
+  left: 38px;
+}
+
+
+#sidebar-right ul.menu, #sidebar-left ul.menu{
+	padding:0;
+	margin:0;
+}
+
+#sidebar-right ul.menu li{
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+#sidebar-left ul.menu li{
+	list-style:none;
+	margin:0 0 7px;
+	padding:0;
+}
+
+#sidebar-right ul.menu li a, #sidebar-left ul.menu li a{
+	color:#999;
+	font-size:11.5px;
+	font-weight:bold;
+	text-decoration:none;
+	border:none;
+}
+
+#sidebar-right ul.menu li a:hover, #sidebar-right ul.menu li a.active{
+	color: #222;
+}
+
+
+
+#sidebar-left ul.menu li a.about {
+	background:transparent url("/sites/default/files/assets/about_sm.png") no-repeat 42px 10px;
+	width:135px;
+	height:35px;
+	border:3px solid black;
+	text-indent:-9999px;
+	display:block;
+}
+
+#sidebar-left ul.menu li a.thinktanks {
+	background:transparent url("/sites/default/files/assets/thinktanks_sm.png") no-repeat 18px 10px;
+	width:135px;
+	height:35px;
+	border:3px solid black;
+	text-indent:-9999px;
+	display:block;
+}
+
+#sidebar-left ul.menu li a.studios {
+	background:transparent url("/sites/default/files/assets/studios_sm.png") no-repeat 35px 10px;
+	width:135px;
+	height:35px;
+	border:3px solid black;
+	text-indent:-9999px;
+	display:block;
+}
+
+#sidebar-left ul.menu li a.people {
+	width:135px;
+	height:35px;
+	border:3px solid black;
+	text-indent:-9999px;
+	display:block;
+	background:transparent url("/sites/default/files/assets/people_sm.png") no-repeat 39px 10px;
+}
+
+/*
+#sidebar-left ul.menu li a.active, #sidebar-left.people ul.menu li a.people,
+#sidebar-left.studios ul.menu li a.studios, #sidebar-left.thinktanks ul.menu li a.thinktanks,
+#sidebar-left.about ul.menu li a.about{
+	display:none;
+}
+*/
+
+.section-about #sidebar-left ul.menu li a.about, #sidebar-left ul.menu li a.about:hover { background-color:#02b1f0; }
+.section-think-tanks #sidebar-left ul.menu li a.thinktanks, #sidebar-left ul.menu li a.thinktanks:hover { background-color:#f58f5f; }
+.section-studios #sidebar-left ul.menu li a.studios, #sidebar-left ul.menu li a.studios:hover { background-color:#D3DB20; }
+.section-people #sidebar-left ul.menu li a.people, #sidebar-left ul.menu li a.people:hover { background-color:#ba8748; }
+
+
+/**
+ * 5.HEADER
+ */
+
+#header {
+  margin: 0 auto;
+	padding: 35px 0 0;
+	position: relative;
+	width: 1024px;
+}
+
+#header #headertop{
+	display:block;
+	border-bottom:1px solid black;
+	width:100%;
+	height:80px;
+}
+
+#header #logo {
+  float: left;
+  margin: 0 40px 0 0;
+}
+
+#oldcastle {
+	float:left;
+	margin:15px 200px 0 0;
+	display:block;
+	position:absolute;
+	left:22px;
+	text-align:left;
+}
+
+#search-theme-form {
+	float: right;
+	margin: 17px 20px 0 20px;
+	display: block;
+}
+
+#homecontainer{
+	padding-top: 20px;
+	margin:0 auto 50px;
+	text-align: center;
+	clear: both;
+	width: 710px;
+	height: 73px;
+	text-indent: -9999px;
+}
+#home {
+	border: none;
+	width: 237px;
+	height: 73px;
+	display: block;
+	margin:0 auto;
+	background: transparent url("/sites/default/files/assets/homeSprite.gif") 0 0 no-repeat;
+}
+#home:hover {
+	background: transparent url("/sites/default/files/assets/homeSprite.gif") 0 -75px no-repeat;
+}
+
+
+
+#edit-search-theme-form-1 {
+	width: 100px;
+height: 14px;
+padding: 0 0 2px 0;
+margin: 0 5px 0 0;
+background: transparent;
+color: black;
+font-family: Helvetica, Arial, sans-serif;
+font-weight: 400;
+font-style: normal;
+font-size: 12px;
+line-height: 12px;
+border: 0;
+border-bottom: 1px solid black;
+border-image: initial;
+}
+
+input #edit-submit {
+	display: inline;
+	width: 14px;
+	height: 14px;
+	padding: 0;
+	margin: 0;
+	border: none;
+	background-color: black;
+	color: white;
+}
+
+/* hides "Search this site:" label from search forms */
+
+div#edit-search-theme-form-1-wrapper label, 
+div#edit-search-block-form-1-wrapper label {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+#diagram {
+	text-align: center;
+	margin: 0 auto 35px;
+}
+
+/**
+ * 6.NAVIGATION
+ */
+
+#navigation {
+  display:none;
+  clear: both;
+  margin: 0;
+  padding: 0;
+}
+
+#navigation ul#main-menu {
+  clear: both;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#navigation ul#main-menu li {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+#navigation ul#main-menu li a {
+  display: block;
+  padding: 0 2em 0 0;
+}
+
+#navigation ul#secondary-menu {
+  clear: both;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#navigation ul#secondary-menu li {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+#navigation ul#secondary-menu li a {
+  display: block;
+  padding: 0 2em 0 0;
+}
+
+.breadcrumb {
+  display:none;
+}
+
+#skip-link {
+  position: absolute;
+}
+
+/* primary links menu (ie. homepage large buttons) */
+#block-menu-primary-links h2 { display:none; }
+
+#homelinks, #homelinks li {
+	list-style:none;
+	margin-bottom:35px;
+}
+
+#homelinks li a {
+	display: block;
+	width: 690px;
+	height:140px; /* readjusted with javascript */
+	border:5px solid black;
+	margin:0 auto;
+	position:relative;
+	left:-10px;
+	text-indent:-9999px;
+}
+
+#homelinks #aboutbutton {
+	background:transparent url("/sites/default/files/assets/aboutheader.gif") no-repeat 213px 33px;
+}
+#homelinks #aboutbutton:hover {
+	background-color:#02b1f0;
+}
+#homelinks #thinktanksbutton {
+	background:transparent url("/sites/default/files/assets/thinktankheader.gif") no-repeat 90px 33px;
+}
+#homelinks #thinktanksbutton:hover {
+	background-color:#f58f5f;
+}
+#homelinks #studiosbutton {
+	background:transparent url("/sites/default/files/assets/studiosheader.gif") no-repeat 178px 33px;
+}
+#homelinks #studiosbutton:hover {
+	background-color:#D3DB20;
+}
+#homelinks #peoplebutton {
+	background:transparent url("/sites/default/files/assets/peopleheader.gif") no-repeat 198px 33px;
+}
+#homelinks #peoplebutton:hover {
+	background-color:#ba8748;
+}
+
+/* secondary links menu (ie. login) */
+#block-menu-secondary-links h2 {display:none;}
+#block-menu-secondary-links {
+	float:right;
+	margin-bottom:25px;
+}
+#block-menu-secondary-links .menu li {
+	list-style: none;
+	float: right;
+	margin: 20px 0 0 0;
+	font: 18px "Swiss 721", Helvetica, Arial, sans-serif;
+	display: inline;
+}
+
+#block-menu-secondary-links .menu li a {
+	color:black;
+	text-decoration:none;
+	border: none;
+}
+
+#block-menu-secondary-links .menu li a:hover, #block-menu-secondary-links .menu li a:active {
+	color:black;
+}
+
+/* menus and item lists */
+
+.item-list ul {
+  margin: 0;
+  padding: 0 0 0 1.5em;
+}
+
+.item-list ul li {
+  margin: 0;
+  padding: 0;
+}
+
+ul.links li {
+  margin: 0;
+  padding: 0;
+}
+
+ul.inline {
+  clear: both;
+}
+
+ul.inline li {
+  margin: 0;
+  padding: 0 1em 0 0;
+}
+
+/* admin tabs */
+
+.tabs-wrapper {
+  border-bottom: 1px solid #333;
+  margin: 0 0 1.4375em;
+}
+
+ul.primary {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.primary li a {
+  background: none;
+  border: none;
+  display: block;
+  float: left;
+  line-height: 1.5em;
+  margin: 0;
+  padding: 0 1em;
+}
+
+ul.primary li a:hover, ul.primary li a.active {
+  background: #666;
+  border: none;
+  color: #fff;
+}
+
+ul.primary li a:hover {
+  background: #888;
+  text-decoration: none;
+}
+
+ul.secondary {
+  background: #666;
+  border-bottom: none;
+  clear: both;
+  margin: 0;
+  padding: 0;
+}
+
+ul.secondary li {
+  border-right: none;
+}
+
+ul.secondary li a, ul.secondary li a:link {
+  border: none;
+  color: #ccc;
+  display: block;
+  float: left;
+  line-height: 1.5em;
+  padding: 0 1em;
+}
+
+ul.secondary li a:hover, ul.secondary li a.active {
+  background: #888;
+  color: #fff;
+  text-decoration: none;
+}
+
+ul.secondary a.active {
+  border-bottom: none;
+}
+
+/**
+ * 7.NODES
+ */
+
+.node {
+  margin-bottom: 1.5em;
+}
+
+/* tags */
+
+.terms {
+  margin: 0 0 1.5em;
+}
+
+.terms span {
+  font-weight: bold;
+}
+
+/* profile */
+
+.profile {
+  margin: 1.5em 0;
+}
+
+.profile h3 {
+  border: none;
+}
+
+.profile dt {
+  margin-bottom: 0;
+}
+
+.profile dd {
+  margin-bottom: 1.5em;
+}
+
+/**
+ * 8.COMMENTS
+ */
+
+#comment {
+  color:white;
+}
+
+/**
+ * 9.BLOCKS
+ */
+
+.block {
+  position: relative;
+}
+
+/* login block */
+#user-login-form {
+  padding: 0;
+  text-align: left;
+}
+
+#user-login-form .form-item {
+  margin: 1em 0;
+}
+
+#user-login-form .item-list ul li {
+  background: none;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* block configuration links */
+
+section.block div.edit {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  display: none;
+  font-size: 9px;
+  margin: 0;
+  overflow: hidden;
+  padding: 2px 0 2px 10px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 40;
+}
+
+section.block:hover div.edit {
+  display:block;
+}
+
+section.block div.edit a {
+  color: #999;
+  margin-right: 10px;
+}
+
+section.block div.edit:hover a {
+  color: #000;
+}
+
+/* views configuration links */
+
+div.view {
+  position: relative;
+}
+
+div.view div.views-hide-hover,
+div.view:hover div.views-hide,
+div.view div.views-admin-links,
+div.view div.views-admin-links-hover,
+div.view div.views-admin-links:hover {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  font-size: 9px;
+  margin-right: 0;
+  margin-top: 0;
+  padding: 0;
+  padding-left: 10px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+}
+
+div.view div.views-admin-links li a {
+  color: #999;
+}
+
+/**
+ * 10.FOOTER
+ */
+
+#footer {
+  clear: both;
+  padding: 1.5em 0;
+  position: relative;
+}
+
+#footer a.feed-icon {
+  position: absolute;
+  right: 0;
+  top: 1.6667em;
+}
+
+/* support drupal */
+#footer #block-system-0 {
+  position: absolute;
+  right: 25px;
+  top: 1.6667em;
+}
+
+/**
+ * 11.CSS SUPPORT
+ */
+
+/**
+ * Hide elements from all users.
+ *
+ * Used for elements which should not be immediately displayed to any user. An
+ * example would be a collapsible fieldset that will be expanded with a click
+ * from a user.
+ */
+
+.element-hidden {
+  display: none;
+}
+
+/**
+ * Hide elements visually, but keep them available for screen-readers.
+ *
+ * Used for information required for screen-reader users to understand and use
+ * the site where visual display is undesirable. Information provided in this
+ * manner should be kept concise, to avoid unnecessary burden on the user.
+ * "!important" is used to prevent unintentional overrides.
+ */
+
+.element-invisible {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/**
+ * The .element-focusable class extends the .element-invisible class to allow
+ * the element to be focusable when navigated to via the keyboard.
+ */
+
+.element-invisible.element-focusable:active,
+.element-invisible.element-focusable:focus {
+  position: static !important;
+  clip: auto;
+}
+
+/**
+ * Markup free clearing.
+ *
+ * @see http://perishablepress.com/press/2009/12/06/new-clearfix-hack
+ */
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* IE6 */
+
+* html .clearfix {
+  height: 1%;
+}
+
+/* IE7 */
+
+*:first-child + html .clearfix {
+  min-height: 1%;
+}
+
+/* clear floats */
+.clear { clear: both; }
+
+/* display block */
+.display-block { display: block; }
+
+
+/* 12. VIEWS */
+.view-thinktank {
+text-align:center;
+}
+
+.view-thinktank .views-field-field-thinktank-city-value, .view-thinktank .views-field-field-thinktank-date-value,
+#main .think-tank-city, #main .think-tank-about .title, #main .think-tank-gallery .title, #main .think-tank-session .title{
+	display:block;
+	text-align:center;
+	margin:0 auto 7px;
+	font-size:36px;
+	font-weight:bold;
+}
+
+#main .think-tank-graphic{
+	margin:10px auto 30px;
+	text-align:center;
+}
+#main .think-tank-about, #main .think-tank-gallery, #main .think-tank-session {
+	margin:0 0 30px;
+}
+
+#main .arrow-prev, #main .think-tank-gallery-image-container {
+	display:block;
+	float:left;
+}
+
+#main .think-tank-gallery-image-container{
+	margin-left:54px;
+}
+
+#main .arrow-next{
+	display:block;
+	float:right;
+}
+#main .arrow-prev, #main .arrow-next{
+	width:36px;
+	position:relative;
+	top:135px;
+	height:56px;
+}
+#main .think-tank-gallery-image-container{
+	width:530px;
+	margin-bottom: 30px;
+}
+
+#main .arrow-prev{
+	text-indent:-9999px;
+	background:transparent url("/sites/default/files/assets/prevSprite.gif") no-repeat 0 0;
+}
+#main .arrow-prev:hover{
+	background:transparent url("/sites/default/files/assets/prevSprite.gif") no-repeat 0 -56px;
+	cursor:pointer;
+}
+#main .arrow-next{
+	text-indent:-9999px;
+	background:transparent url("/sites/default/files/assets/nextSprite.gif") no-repeat 0 0;
+}
+#main .arrow-next:hover{
+	background:transparent url("/sites/default/files/assets/nextSprite.gif") no-repeat 0 -56px;
+	cursor:pointer;
+}
+
+#main .think-tank-session .speakers, #main .think-tank-date, #main .think-tank-location, .view-thinktank .views-field-field-thinktank-date-value-1, .view-thinktank .views-field-field-thinktank-date-value2, .view-thinktank .views-field-field-thinktank-location-value {
+	text-align:center;
+	display:block;
+	font-size:18px;
+	font-weight:bold;
+}
+
+#main .think-tank-gallery-image-container .hidden {
+	display:none;
+}
+
+.view-thinktank .views-field-field-thinktank-location-value {
+	margin-bottom:17px;
+}
+
+
+/* ABOUT PAGE */
+label.views-label-field-about-design-critics-nid, label.views-label-field-about-studio-introduction-value, label.views-label-field-about-collab-program-url, label.views-label-field-about-tech-consultants-url, label.views-label-field-about-env-consultants-url, label.views-label-field-about-energy-modeling-url, label.views-label-field-about-sw-assistants-url {
+	font-weight: bold;
+	display: block;
+	margin-bottom:12px; /*30-18=12 */
+}
+
+
+#main .view-about .field-content {
+	margin-bottom: 30px;
+	
+}
+
+#logo {
+	border: none;
+}
+
+
+/* THINK TANK LISTING PAGE */
+
+#main .view-thinktank .views-row {
+	margin-bottom: 90px;
+}
+
+#main .view-thinktank .morelink {
+	margin-top: 30px;
+}
+
+.morecontainer{
+	width: 100%;
+	border-bottom:1px solid black;
+	display: block;
+	margin-bottom: 70px;
+	margin-top: 10px;
+}
+
+.morelink {
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+	text-indent: -9999px;
+	height: 56px;
+	width: 157px;
+	border: none;
+	background:transparent url("/sites/default/files/assets/moreSprite.gif") 0 0 no-repeat;
+}
+
+.morelink:hover {
+	background:transparent url("/sites/default/files/assets/moreSprite.gif") 0 -56px no-repeat;
+}
+
+.morelinksmall {
+	display: block;
+	text-align: center;
+	margin: 10px auto 0;
+	text-indent: -9999px;
+	height: 35px;
+	width: 98px;
+	border:none;
+	background:transparent url("/sites/default/files/assets/morelinksmall.gif") 0 0 no-repeat;
+}
+
+.morelinksmall:hover {
+	background:transparent url("/sites/default/files/assets/morelinksmall.gif") 0 -35px no-repeat;
+}
+
+.expandcontainer{
+	width: 100%;
+	border-bottom:1px solid black;
+	display: block;
+	margin-bottom: 0px;
+	margin-top: 10px;
+}
+.expandlink {
+	display: block;
+	text-align: center;
+	margin:0 auto;
+	text-indent: -9999px;
+	height: 56px;
+	width: 157px;
+	border: none;
+	background:transparent url("/sites/default/files/assets/expandlink.gif") 0 0 no-repeat;
+}
+
+.expandlink:hover {
+	background:transparent url("/sites/default/files/assets/expandlink.gif") 0 -56px no-repeat;
+}
+
+.expandlink.collapse {
+	background:transparent url("/sites/default/files/assets/expandlink.gif") 0 -112px no-repeat;
+}
+
+.expandlink.collapse:hover {
+	background:transparent url("/sites/default/files/assets/expandlink.gif") 0 -168px no-repeat;
+}
+
+.expandlinkwhite {
+	display: block;
+	text-align: center;
+	margin:0 auto;
+	text-indent: -9999px;
+	height: 56px;
+	width: 157px;
+	border: none;
+	background:transparent url("/sites/default/files/assets/expandlinkwhite.png") 0 0 no-repeat;
+}
+
+.expandlinkwhite:hover {
+	background:transparent url("/sites/default/files/assets/expandlinkwhite.png") 0 -56px no-repeat;
+}
+
+.expandlinkwhite.collapse {
+	background:transparent url("/sites/default/files/assets/expandlinkwhite.png") 0 -112px no-repeat;
+}
+
+.expandlinkwhite.collapse:hover {
+	background:transparent url("/sites/default/files/assets/expandlinkwhite.png") 0 -168px no-repeat;
+}
+
+/* STUDIOS PAGE */
+.teaserhead {
+	display: inline;
+}
+.teaserelipses {
+	display: inline;
+}
+.teasertail {
+	display: none;
+}
+
+div#abouttitle, /* About the Integrated Studios */
+#main .attachment .view-Studios div.views-field-title, /* Spring 2011 */
+#main .view-Studios div.view-header,
+#main .view-Studio2012 .attachment .view-header,
+#main .view-Studio2012 .views-field-title,
+#resources-header{
+	text-align: center;
+	font-size: 36px;
+	margin: 0 auto 30px;
+	font-weight: bold;
+	display: block;
+}
+
+#main .attachment .view-Studios div.views-field-title{
+	padding-top: 20px;
+}
+
+#main .view-Studio2012 .attachment {
+	margin-top: 70px;
+}
+
+#main .view-Studio2012 .attachment .view-header{
+	border-bottom: 1px solid black;
+}
+
+#main .view-Studio2012 .attachment .view-header p{
+	line-height: 1.25em;
+}
+
+#main .view-Studio2012 .attachment .views-field-title,
+#main .view-Studio2012 .attachment .views-field-field-person-blog-link-url,
+#main .view-Studio2012 .attachment .views-field-field-element-author-nid,
+#main .view-Studio2012 .attachment .building-title,
+#main .view-Studio2012 .attachment .views-field-field-strategy-address-value,
+#main .view-elements .views-field-title,
+#main .view-elements .views-field-field-person-blog-link-url,
+#main .view-elements .views-field-field-element-author-nid,
+#main .view-strategies .building-title,
+#main .view-strategies .views-field-field-strategy-address-value{
+	text-align: center;
+	font-weight: bold;
+	margin: 0 auto;	
+}
+
+#main .view-Studio2012 div.view-content {
+	margin-bottom: 50px;
+}
+
+
+label.views-label-field-studio-about-value, #main div.view.view-Studios.view-id-Studios.view-display-id-page_1.view-dom-id-14 div.attachment.attachment-after div.view.view-Studios.view-id-Studios.view-display-id-attachment_4.view-dom-id-4 div.view-header p {
+	font-weight: bold;
+	display: block;
+	margin-bottom:12px; /*30-18=12 */
+}
+
+#main .view-Studios .views-field-field-studio-about-value {
+	margin-bottom: 20px;
+}
+
+#main div.view.view-Studios.view-id-Studios.view-display-id-page_1.view-dom-id-5 div.attachment.attachment-after div.view.view-Studios.view-id-Studios.view-display-id-attachment_13.view-dom-id-4 div.view-content div.views-row.views-row-1.views-row-odd.views-row-first.views-row-last div.views-field-title span.field-content a {
+	font-size:18px;
+	margin-top: 0;
+}
+
+.view-Studios.view-display-id-attachment_13 .view-content .views-row {
+	margin-bottom: 10px;
+}
+
+.view-Studios.view-display-id-attachment_13 .view-content .views-row .views-field-field-resource-link-url,
+.view-Studios.view-display-id-attachment_13 .view-content .views-row .views-field-field-resource-link-url .field-content a, 
+.view-Studios.view-display-id-attachment_13 .view-content .views-row .views-field-field-resource-desc-value,
+.view-Studios.view-display-id-attachment_13 .view-content .views-row .views-field-field-resource-desc-value div {
+	display: inline;
+}
+
+.view-Studios.view-display-id-attachment_13 .view-content .views-row .views-field-field-resource-link-url{
+	margin-right: 7px;
+}
+
+
+/* RESOURCES */
+
+#main .resource-title {
+	font-weight:bold;
+	margin:0 0 0;
+}
+
+#main .resource-body {
+font-weight:normal;
+}
+
+#main .resource-terms{
+	font-size:12px;
+	margin:15px 0 30px;
+}
+
+.resource-terms span {
+  font-weight: bold;
+}
+
+.resource-submitted {
+	font-size:12px;
+	margin:0 0 12px;
+}
+
+.view-elements,
+.view-strategies {
+margin-top:50px;
+}
+
+/* STUDIO YYYY PAGE */
+#main .view-Studio2012 div.view-content div.views-field-field-studio-about-value
+{
+	margin-bottom: 50px;
+}
+
+#main .view-Studio2012 .views-field-field-element-thumbnail-fid,
+#main .view-Studio2012 .views-field-field-strategy-thumb-fid,
+#main .view-elements .views-field-field-element-thumbnail-fid,
+#main .view-strategies .views-field-field-strategy-thumb-fid,
+#main .view-People .views-field-field-person-portrait-fid,
+#main .think-tank-session .speaker-portrait{
+	float: left;
+}
+
+#main .view-Studio2012 .attachment .views-field-title,
+#main .view-Studio2012 .attachment .views-field-field-element-author-nid,
+#main .view-elements .views-field-title,
+#main .view-elements .views-field-field-element-author-nid,
+#main .resource-title,
+#main .view-People .person-name{
+	margin: 0 auto;
+	text-align: center;
+	font-size: 24px;
+	padding: 0 30px;
+}
+
+#main .element-list-container,
+#main .strategy-list-container,
+#main .view-People .person-title-container{
+	float:right;
+	width:405px;
+}
+
+#main .view-Studio2012 .attachment .views-field-field-element-subtitle-value,
+#main .view-elements .views-field-field-element-subtitle-value{
+	margin: 20px auto;
+	padding: 0 30px;
+}
+
+#main .view-Studio2012 .attachment .views-field-field-element-subtitle-value,
+#main .view-Studio2012 .attachment .views-field-field-strategy-authors-nid,
+#main .view-elements .views-field-field-element-subtitle-value,
+#main .view-strategies .views-field-field-strategy-authors-nid,
+#main .view-People .person-title{
+	margin: 20px auto 5px;
+	text-align: center;
+	padding: 0 30px;
+}
+
+#main .view-People .views-row{
+	clear:both;
+	padding: 30px 0 0;
+}
+
+#main .view-display-id-page_4 .views-row,
+#main .view-display-id-page_5 .views-row,
+#main .view-display-id-page_6 .views-row{
+	padding:0;
+	text-align:center;
+	margin:0 auto;
+}
+
+#main .view-Studio2012 .attachment .views-field-title-1,
+#main .view-elements .views-field-title-1,
+#main .view-strategies .views-field-title-1{
+	clear: both;
+	padding-top:20px;
+	text-align: center;
+	margin-bottom: 70px;
+	border-bottom:1px solid black;
+}
+
+#main .view-Studio2012 .attachment .views-field-tid,
+#main .view-elements .views-field-tid{
+	font-size: 14px;
+	margin:3px auto 0;
+	text-align: center;
+	padding: 0 10px;
+}
+
+/* strategies */
+#main .view-Studio2012 .attachment .building-title,
+#main .view-Studio2012 .attachment .views-field-field-strategy-address-value,
+#main .view-strategies .building-title,
+#main .view-strategies .views-field-field-strategy-address-value{
+	margin: 0 auto;
+	text-align: center;
+	font-size: 24px;
+}
+
+#main .view-Studio2012 .attachment .views-field-field-strategy-authors-nid,
+#main .view-strategies .views-field-field-strategy-authors-nid{
+	padding: 0 10px;
+}
+
+#main .view-Studio2012 .attachment .strategy-authors div,
+#main .view-strategies .strategy-authors div{
+	display: inline;
+	margin-right: 5px;
+}
+
+#main .view-strategies .strategy-authors-label{
+	margin-top:25px;
+}
+
+#main .view-Studio2012 .view-display-id-attachment_6 .view-content div,
+#main .view-Studio2012 .view-display-id-attachment_9 .view-content div
+{
+	font-size: 18px;
+	margin: 0;
+	font-weight: bold;
+}
+
+
+/* ELEMENT PAGE */
+
+#main div.content div.element-title,
+#main div.content div.element-author {
+	font-size: 36px;
+	font-weight: bold;
+	text-align: center;	
+	line-height: 1em;
+}
+
+#main .content .element-abstract-label {
+	font-size: 18px;
+	font-weight: bold;
+	margin: 40px 0 20px;
+	text-align: center;	
+}
+
+#main .content .element-abstract{
+	padding-bottom: 10px;
+}
+
+
+#main .element-dsq {
+	padding: 20px 0 0;
+	margin: 15px 0 0;
+	background: #222;
+	color: white;
+}
+
+
+
+
+#main .versions .view-Element .views-row{
+	padding-bottom: 10px;
+	border-bottom: 1px solid black;
+}
+
+#main .versions .views-field-title,
+#main div.element-dsq div.feature-requests-title {
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 1.15em;
+}
+
+#main .versions .views-field-title{
+	margin-top: 70px;
+}
+
+#main .versions .views-field-title a {
+	border:none;
+}
+
+
+#main .content .feature-requests-title{
+	color: white;
+}
+
+.feature-reqeusts-about{
+	margin: 30px 45px 35px;
+	
+}
+
+.versions .views-field-created{
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 1.25em;
+	margin: 0 0 40px;
+}
+
+#main .versions .view-Element ul.pager li.pager-next a.active {
+	display: inline-block;
+	text-indent: -9999px;
+	height: 56px;
+	width: 143px;
+	border: none;
+	background:transparent url("/sites/default/files/assets/olderSprite.png") 0 0 no-repeat;
+}
+
+#main .versions .view-Element ul.pager li.pager-next a.active:hover {
+	background:transparent url("/sites/default/files/assets/olderSprite.png") 0 -56px no-repeat;
+}
+
+#main .versions .view-Element ul.pager li.pager-next{
+	float: right;
+}
+
+#main .versions .view-Element ul.pager li.pager-previous a.active {
+	display: inline-block;
+	text-indent: -9999px;
+	height: 56px;
+	width: 148px;
+	border: none;
+	background:transparent url("/sites/default/files/assets/newerSprite.png") 0 0 no-repeat;
+}
+
+#main .versions .view-Element ul.pager li.pager-previous a.active:hover {
+	background:transparent url("/sites/default/files/assets/newerSprite.png") 0 -56px no-repeat;
+}
+
+#main .versions .view-Element ul.pager li.pager-previous{
+	float: left;
+	display: inline-block;
+}
+
+#main .versions .view-Element ul.pager .pager-current{
+	display: none;
+}
+
+#main .versions .view-Element ul.pager{
+	padding:0 !important;
+	margin: 50px 0 !important;
+}
+
+#main .versions .item-list .pager li{
+	padding: 0 !important;
+}
+
+#main .versions .view-content .views-field-phpcode span embed,
+#main .versions .view-content .views-field-phpcode span iframe,
+#main .versions .view-content .views-field-field-element-image-fid,
+#main .versions .view-content .views-field-field-elementupdate-downloads-url,
+#main .versions .view-content .views-field-field-elementupdate-text-value {
+	margin-bottom: 25px;
+}
+
+#disqus_thread {
+	display:none;
+}
+
+/* THINK TANKS */
+#main .think-tank-session {
+	clear:both;
+}
+#main .think-tank-session .speakers{
+	margin: 25px auto 15px;
+}
+#main .thinktankspeaker{
+	width:530px;
+	float:left;
+	margin-bottom:40px;
+	border-bottom:1px solid black;
+}
+#main .thinktankspeaker .speaker-left{
+	float:left;
+	width:260px;
+	margin-right:40px;
+	margin-bottom:8px;
+}
+
+#main .thinktankspeaker .speaker-right p{
+	margin-bottom:8px;
+}
+
+#main .think-tank-session .think-tank-s1-speakers.hidden, #main .think-tank-session .think-tank-s2-speakers.hidden,
+#main .think-tank-session .think-tank-s3-speakers.hidden{
+	display:none;
+}
+
+#main .think-tank-session .speaker-text-container{
+	width:260px;
+}
+
+#main .think-tank-session .speaker-name{
+	margin: 10px auto 0;
+	text-align: center;
+	font-size: 24px;
+	padding: 0 5px;
+}
+
+#main .think-tank-session .speaker-title{
+	margin:0 auto;
+	text-align: center;
+	padding: 0 5px;
+}
+
+#main .think-tank-session .arrow-prev{
+	margin: 0 54px 0 0;
+}
+
+#main .think-tank-session .arrow-prev.hide, #main .think-tank-session .arrow-next.hide{
+	visibility:hidden;
+}
+
